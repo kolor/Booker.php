@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/client.css">
+<script src="/js/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+    $(document).ready(function() {
+        $("#client-addr").validate();
+        $("#fname").rules("add", {required:true, rangelength: [2, 20]});
+        $("#lname").rules("add", {required:true, rangelength: [3, 20]});
+        $("#organization").rules("add", {required:true, rangelength: [4, 80]});
+        $("#vat").rules("add", {required:true, rangelength: [4, 11]});
+        $("#telephone").rules("add", {required:true, rangelength: [4, 14]});
+        $("#email_work").rules("add", {required:true, email:true});
+    });
+</script>
+
+<?php echo $this->render('subnav.phtml'); ?>
+<section id="main" class="client-address">
+    <div class="title">Add New Address</div>
+    <?php echo $this->error; ?>
+
+<form id="client-addr" method="<?= $this->escape($this->form->getMethod()) ?>">
+	<input type="hidden" name="client" value="<?= $this->client ?>" />
+    <div class="left">
+<?php   
+        echo $this->form->label;  
+        echo $this->form->address1;  
+        echo $this->form->address2;  
+        echo $this->form->city;  
+?>
+    </div>
+    <div class="right">
+<?php   
+        echo $this->form->county;
+        echo $this->form->postcode;
+        echo $this->form->country;  
+        echo $this->form->note;  
+?>
+    </div>
+    <div class="clear"></div>
+<?php echo $this->form->submit; ?> 
+    </form>
+</section>

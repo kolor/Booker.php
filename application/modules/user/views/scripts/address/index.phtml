@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/user.css">
+<script type="text/javascript"> 
+    $(document).ready(function() {
+
+    });
+</script>
+
+<?= $this->render('subnav.phtml'); ?>
+<section id="main" class="address">
+    <div class="title">Address</div>
+<?php 
+    if (!empty($this->error)) echo '<div class=error>'.$this->error.'</div>';
+    if (!empty($this->message)) echo '<div class="flash">'.$this->message.'</div>';
+?>
+    <p class="tr"><a class="button" href="/user/address/add"><img src="../img/fugue/plus-circle.png">Add New</a></p>
+<?php
+    if ($this->addresses && count($this->addresses) > 0)
+        foreach($this->addresses as $a) {   ?>
+            <div class="addr-line">
+				<span class="type"><?= Application_Model_User_Address::$types[$a->label] ?></span>
+                <span class="addr"><?= $a->address1 ?>, <?= empty($a->address2) ? '' : $a->address2.',' ?> <?= $a->city ?>, <?= $a->postcode ?>, <?= $a->country ?></span>
+                <span class="delete"><a href="/user/address/remove/id/<?= $a->id ?>">Delete</a></span>
+                <span class="edit"><a href="/user/address/edit/id/<?= $a->id ?>">Edit</a></span>
+                <span class="note"><?= $a->note ?></span>
+            </div>        
+<?php   }   ?>
+    
+</section>

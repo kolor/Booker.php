@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Booker | beta ver 0.1</title>
+        <link href="/css/reset.css" type="text/css" rel="stylesheet">
+        <link href="/css/default.css" type="text/css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+<?php
+        echo $this->headTitle();
+        echo $this->headLink();
+        echo $this->headScript();
+?>
+    </head>
+    <body>
+        <div id="wrap">
+            <?php echo $this->layout()->content; ?>
+        </div>
+    </body>
+</html>
+

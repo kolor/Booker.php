@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/css/client.css">
+<script src="/js/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript"> 
+    $(document).ready(function() {
+        $("#client").validate();
+        $("#fname").rules("add", {required:true, rangelength: [2, 20]});
+        $("#lname").rules("add", {required:true, rangelength: [3, 20]});
+        $("#organization").rules("add", {required:true, rangelength: [4, 80]});
+        $("#vat").rules("add", {required:true, rangelength: [4, 11]});
+        $("#telephone").rules("add", {required:true, rangelength: [4, 14]});
+        $("#email_work").rules("add", {required:true, email:true});
+
+        $("#clients").tablesorter({headers: {
+            6:{sorter: false},
+            4:{sorter:false},
+        }});
+    });
+
+</script>
+
+<?php echo $this->render('subnav.phtml'); ?>
+<section id="main" class="client">
+    <div class="title"><?= $this->form->fname->getValue().' '.$this->form->lname->getValue() ?></div>
+    <?php echo $this->error; ?>
+    <form id="client" method="<?= $this->escape($this->form->getMethod()) ?>">
+    <div class="left">
+<?php   
+        echo $this->form->fname;  
+        echo $this->form->lname;  
+        echo $this->form->organization;  
+        echo $this->form->vat;  
+?>
+    </div>
+    <div class="middle">
+<?php
+        echo $this->form->telephone; 
+        echo $this->form->fax;  
+        echo $this->form->email_work;   
+        echo $this->form->skype; 
+?>
+    </div>
+    <div class="right">
+<?php   
+        echo $this->form->limit;
+        echo $this->form->term;
+        echo $this->form->notes;  
+?>
+    </div>
+    <div class="clear"></div>
+<?php echo $this->form->submit; ?> 
+    </form>
+
+    <div class="title">Addresses</div>
+    <?php echo $this->render('address.phtml'); ?>
+</section>

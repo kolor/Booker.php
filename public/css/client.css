@@ -1,0 +1,32 @@
+table.client{font-family: arial; margin: 0 auto; width: 100%}
+table.client th{background-color: #F5F5F5; border: 1px solid #ccc; font-weight: bold; padding: 3px; text-align: center;}
+table.client td{}
+
+
+/*-------------------
+ * /manage/add
+ * 
+ *------------------*/
+div.left {margin: 0 20px; float:left; width: 250px; margin-left: 100px;}
+div.middle {margin: 0 20px; float: left;}
+div.right {margin: 0 20px; float: left; width: 250px;}
+
+.left ul.errors {text-align: right; left: -260px;}
+.left label.error {left: -155px; text-align: right; top: -32px;}
+.right ul.errors {left: 250px;}
+.right label.error {left: 10px; text-align: right; top: 0px;}
+
+.client input[type=text], .client input[type=password], .client textarea {width: 233px;}
+.client input[type=submit] {margin-left: 445px;}
+
+
+
+/*---------------------
+* /address/add
+*
+*--------------------*/
+.client-address input[type=text], .client input[type=password], .client textarea {width: 240px;}
+.client-address input[type=submit] {margin-left: 440px;}
+
+.client-address div.left {margin-left: 200px;}
+.client-address div.right {margin-left: 50px;}

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/user.css">
+<script type="text/javascript"> 
+    $(document).ready(function() {
+
+    });
+</script>
+
+<?= $this->render('subnav.phtml'); ?>
+<section id="main" class="bank">
+    <div class="title">Bank details</div>
+<?php 
+    if (!empty($this->error)) echo '<div class=error>'.$this->error.'</div>';
+    if (!empty($this->message)) echo '<div class="flash">'.$this->message.'</div>';
+?>
+    <p class="tr"><a class="button" href="/user/bank/add"><img src="../img/fugue/plus-circle.png">Add New</a></p>
+<?php
+    if ($this->bank && count($this->bank) > 0)
+        foreach($this->bank as $a) {   ?>
+            <div class="bank-line">
+                <span class="type"><?= Application_Model_User_Bank::$types[$a->source] ?></span>
+                <span class="bank"><?= $a->bank ?>, <?= $a->swift ?>, <?= $a->iban ?></span>
+                <span class="delete"><a href="/user/bank/remove/id/<?= $a->id ?>">Delete</a></span>
+                <span class="edit"><a href="/user/bank/edit/id/<?= $a->id ?>">Edit</a></span>
+                <span class="note"><?= $a->note ?></span>
+            </div>        
+<?php   }   ?>
+    
+</section>

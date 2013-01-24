@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/user.css">
+<link rel="stylesheet" href="/css/chosen.css">
+<script src="/js/chosen.jquery.min.js" type="text/javascript"></script>
+<script src="/js/jquery.validate.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">	
+	$(document).ready(function() {
+		$("#bank").validate();
+	});
+</script>
+
+<?= $this->render('subnav.phtml'); ?>
+<section id="main" class="bank-edit">
+    <div class="title">Edit Bank Details</div>
+<?php 
+    if (!empty($this->error)) echo '<div class=error>'.$this->error.'</div>';
+    if (!empty($this->message)) echo '<div class="flash">'.$this->message.'</div>';
+   	echo $this->form; 
+?>
+</section>
+<script type="text/javascript"> $(".chzn-select").chosen(); </script>

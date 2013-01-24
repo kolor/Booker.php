@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/user.css">
+<link rel="stylesheet" href="/css/chosen.css">
+<script src="/js/chosen.jquery.min.js" type="text/javascript"></script>
+<script src="/js/jquery.validate.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">	
+	$(document).ready(function() {
+		$("#address").validate();
+		$("#address1").rules("add", {required:true, rangelength: [3, 30]});
+		$("#address2").rules("add", {required:false, rangelength: [3, 30]});
+		$("#city").rules("add", {required:true, rangelength: [3, 20]});
+		$("#county").rules("add", {required:false, rangelength: [3, 15]});
+        $("#postcode").rules("add", {required:true, rangelength: [3, 10]});
+        $("#country").rules("add", {required:true, rangelength: [3, 30]});
+        $("#note").rules("add", {required:false, rangelength: [1, 25]});
+	});
+</script>
+
+<?= $this->render('subnav.phtml'); ?>
+<section id="main" class="address-add">
+    <div class="title">Add address</div>
+<?php 
+    if (!empty($this->error)) echo '<div class=error>'.$this->error.'</div>';
+    if (!empty($this->message)) echo '<div class="flash">'.$this->message.'</div>';
+?>
+    
+    <form id="address" action="<?= $this->escape($this->form->getAction()) ?>" method="<?= $this->escape($this->form->getMethod()) ?>">
+    <div class="left">
+<?php   
+        echo $this->form->label;  
+        echo $this->form->address1;  
+        echo $this->form->address2;  
+        echo $this->form->city; 
+?>
+    </div>
+    <div class="right">
+<?php   
+        echo $this->form->county; 
+        echo $this->form->postcode;   
+        echo $this->form->country; 
+        echo $this->form->note;
+?>
+    </div>
+    <div class="clear"></div>
+<?php echo $this->form->submit; ?> 
+    </form>
+</section>
+<script type="text/javascript"> $(".chzn-select").chosen(); </script>

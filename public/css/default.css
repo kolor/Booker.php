@@ -1,0 +1,154 @@
+/*@import url('forms.css');*/
+
+/*-------------
+ * Root layout
+ *-------------*/
+html, body {background: url('../img/body.png') repeat-x 0 0; background-size: auto auto;}
+html {height: 100%; color: #333333; font-family: "Verdana","Sans-Serif"; font-size: 12px;}
+body {width: 980px; margin: 0 auto; height: 100%; line-height: 1.5em; /*background: #FFF*/}
+body > div#wrap {height: auto; min-height: 100%;}
+div#wrap {height: 100%;}
+header, nav, section, article, aside, footer {clear: both; display: block}
+
+
+/*---------------
+ * HTML elements
+ *---------------*/
+a {border-bottom: 0 solid #D7E1E9; color: #0055CC; outline: medium none; text-decoration: none;}
+a:hover {color: #CC0000; cursor: pointer; text-decoration: none;}
+
+
+/*-------------
+ * Header area
+ *-------------*/
+header {height: 50px; width: 980px;}
+header div#logo {height: 50px; float: left; margin: 0; text-indent: -1000px; width: 20%; 
+    background: url("../img/logo.png") no-repeat 0 0;}
+header ul#personal {display: block; float: right; height: 38px; background: #f5f5f5; border: 1px solid #ccc; padding: 0 5px;
+    border-top: none; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+header ul#personal li {display: block; float: left; padding: 10px 5px;}
+header ul#personal li a{color: #383838}
+header ul#personal li a.profile {background: url("../img/icons/hire-me.png") no-repeat left center; padding: 6px 4px 4px 20px;}
+header ul#personal li a.settings {background: url("../img/icons/config.png") no-repeat left center; padding: 6px 4px 4px 20px;}
+header ul#personal li a.stats {background: url("../img/icons/administrative-docs.png") no-repeat left center; padding: 6px 4px 4px 20px;}
+header ul#personal li a.messages {background: url("../img/icons/comment.png") no-repeat left center; padding: 6px 4px 4px 20px;}
+header ul#personal li a.logout {background: url("../img/icons/sign-out.png") no-repeat left center; padding: 6px 4px 4px 20px;}
+header ul#personal li a.login {background: url("../img/icons/sign-in.png") no-repeat left center; padding: 1px 10px 1px 20px; 
+    margin-left: 10px; font-size: 13px;}
+header ul#personal li a.register {background: url("../img/icons/sign-up.png") no-repeat left center; padding: 1px 10px 1px 20px; 
+    font-size: 13px;}
+
+
+/*-----------------
+ * Navigation area
+ *-----------------*/
+nav {height: 38px; margin-top: 10px; width: 980px; border: 1px solid #ccc; background-color: #fff; 
+    border-top-left-radius: 3px; border-top-right-radius: 3px; background-image: linear-gradient(top, #fff, #eee);}
+nav ul.panel {}
+nav ul.panel li {display: block; float: left; font-size:16px; padding: 11px;}
+nav ul.panel a {color: #383838; padding-left: 0; text-decoration: none; font-size: 15px;}
+nav ul.panel a {border-right: 1px solid #ccc; padding: 0 15px 0 25px;}
+nav ul.panel a.customers {background: url("../img/icons/customers.png") no-repeat scroll 0 0 transparent;}
+nav ul.panel a.product {background: url("../img/icons/product.png") no-repeat scroll 0 0 transparent;}
+nav ul.panel a.invoice {background: url("../img/icons/order-2.png") no-repeat scroll 0 0 transparent;}
+nav ul.panel a.billing {background: url("../img/icons/billing.png") no-repeat scroll 0 0 transparent;}
+nav ul.panel a.balance {background: url("../img/icons/statistics.png") no-repeat scroll 0 0 transparent;}
+nav ul.panel a.task {background: url("../img/icons/finished-work.png") no-repeat scroll 0 0 transparent;}
+nav ul.panel a:hover, nav ul.panel a:active {color:#000; text-decoration:underline;}
+
+
+/*----------------
+ * Sub navigation
+ *----------------*/
+
+div#tips {height: 35px; margin: 0 auto 20px; width:980px; background: #f5f5f5; border: 1px solid #ccc; 
+    border-top: 1px solid #fff; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}  
+div#tips h5 {padding: 8px;}
+div#tips h5 a {margin: 0 5px; padding: 3px 5px; background: none repeat scroll 0 0 #fafafa;	border-radius: 3px;}
+div#tips h5 a.active {background: none repeat scroll 0 0 #0055CC; color: #fff; text-underline-position: above; text-decoration: underline;}
+
+
+
+/*----------------
+ * Main content
+ *----------------*/
+
+
+
+/*----------------
+ * Section & Side
+ *----------------*/
+section#main {height: 100%; padding-top:10px; padding-bottom: 60px;}
+article {margin:5px; padding: 5px;}
+article header {border:1px solid #ccc;}
+aside.note {clear: right; float: right; margin: 50px 0; padding: 5px 5px 10px 15px; position: relative; width: 45%;	
+    border-bottom: 1px solid #ccc; background-color: #fff; border-radius: 5px; background-image: linear-gradient(top, #fff, #eee);}
+aside.note h3 {padding: 0.5em 0}
+
+
+/*--------
+ * Footer
+ *--------*/
+footer {height: 50px; margin-top: -50px; border-top:1px solid #ccc;}
+footer p {height: 24px; margin: 10px;}
+footer p span {float:right;}
+footer ul#links {display: block; float: left;}
+footer ul#links li {display: block; float: left; padding: 10px;}
+
+
+/*----------------
+ * Table elements
+ *----------------*/
+table.main {margin: 0 auto 10px; font-size: 11px !important; width: 100%;}
+table.main caption {}
+table.main .options{}
+table.main thead tr .header {background: url("../img/bg.gif") no-repeat center left #dedede; border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc; cursor: pointer;}
+table.main thead tr .headerSortUp {background: url("../img/asc.gif") no-repeat center left #e4e4e4; 
+    border-top: 1px solid #fff; border-bottom: 1px solid #ccc;}
+table.main thead tr .headerSortDown {background: url("../img/desc.gif") no-repeat center left #e4e4e4;
+    border-top: 1px solid #fff; border-bottom: 1px solid #ccc;}
+table.main tr.search td{padding:4px 0}
+table.main thead th {background-color: #dedede; font-weight: normal; padding: 4px 3px; white-space: nowrap;
+	border-top: 1px solid #fff; border-bottom: 1px solid #ccc;}
+table.main th.header{padding: 4px 3px 4px 20px;}
+table.main tbody tr {border-bottom: 1px dotted #ddd}
+table.main tbody tr:hover{background-color: #f5f5f5; cursor: pointer;}
+table.main tbody tr:active{background-color: #e4e4e4; cursor: pointer;}
+table.main tbody td {padding: 5px 3px 3px 3px;}
+table.main tfoot td {background-color: #f5f5f5; padding: 2px 3px;
+    border-top: 1px solid #ccc; border-bottom: 1px solid #fff;}
+table.main a.modal{border-bottom: 1px dotted;}
+table.main a.modal:hover{}
+
+
+/*-----------------
+ * Flash messages
+ *-----------------*/
+#title {padding: 10px 0; text-decoration: underline; font: normal 24px Georgia, "Times New Roman", Times, serif;
+    text-shadow: 1px 1px 1px #ccc; text-transform: capitalize;}
+#message {display: block; padding: 0 0 50px 0; font-size: 1.1em; color: #333;}
+.title {padding: 10px 0 10px; text-align:center; text-decoration: underline; text-transform: capitalize;
+    font: normal 23px Georgia, "Times New Roman", Times, serif; text-shadow: 1px 1px 1px #ccc; }
+div.message {font-size: 16px; margin: 20px; text-align: center;}
+div.error {margin: 10px auto; padding: 5px; width: 300px; background: #FFC9C9; border: 1px solid #D69696; 
+    color: #960A0A; text-align: center;}
+div.flash {margin: 10px auto; padding: 5px; width: 300px; background: #FFF9AB; border: 1px solid #D4D696; 
+    color: #656410; text-align: center;}
+
+ul.list {list-style: none; margin: 0 0 20px 0;}
+ul.list li {padding: 2px 2px 2px 15px; margin: 0; background: url(../img/icon-checklist.gif) no-repeat left center;}
+
+
+
+/*-----------------
+ * Universal class
+ *-----------------*/
+.tr {text-align:right}
+.fl{float: left}
+.fr{float: right}
+.space{color: #ccc; margin: 0 10px 0 10px}
+.hr{border-bottom: 1px solid #CCCCCC; margin: 1px auto;}
+.textright {text-align:right;}
+.clear {clear: both;}
+.clr {overflow: hidden;}

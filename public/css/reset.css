@@ -1,0 +1,37 @@
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+
+/**
+	Base font size: 
+
+    http://www.reeddesign.co.uk/test/points-pixels.html
+    
+    6pt     8px     0.5em       50%
+    7pt     9px     0.55em      55%
+    7.5pt   10px    0.625em     62.5%
+    8pt     11px    0.7em       70%
+    9pt     12px    0.75em      75%
+    10pt    13px    0.8em       80%
+    10.5pt  14px    0.875em     87.5%
+    11pt    15px    0.95em      95%
+    12pt    16px    1em         100%
+    13pt    17px    1.05em      105%
+    13.5pt  18px    1.125em     112.5%
+    14pt    19px    1.2em       120%
+    14.5pt  20px    1.25em      125%
+    15pt    21px    1.3em       130%
+    16pt    22px    1.4em       140%
+    17pt    23px    1.45em      145%
+    18pt    24px    1.5em       150%
+    20pt    26px    1.6em       160%
+**/
+
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}
+/*
+input,select,th,td {font-size:12px;}
+*/
+select {margin:0;}
+/*
+div div,div p,div td,td div,p p,p td,li p,td p,blockquote p,li li {font-size:12px;}
+*/

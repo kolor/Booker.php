@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/user.css">
+<script src="/js/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript">	
+	$(document).ready(function() {
+		$("#register").validate();
+		$("#username").rules("add", {required:true, rangelength: [5, 20]});
+		$("#password").rules("add", {required:true, rangelength: [6, 20]});
+		$("#email").rules("add", {required:true, email:true, rangelength: [6, 80]});
+		$("#fullname").rules("add", {required:true, rangelength: [4, 30]});
+	});
+</script>
+
+<section id="main" class="signup">
+    <div class="title">Sign Up</div>
+    <?php 
+    	echo $this->form; 
+    ?>
+</section>

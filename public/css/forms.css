@@ -1,0 +1,62 @@
+/*---------------
+ * General forms 
+ *---------------*/
+dl.zend_form {margin: 15px auto 15px; width: 310px;}
+
+input[type=text],input[type=password], textarea, select {
+    border: 1px solid #ddd; border-color: #ccc #ddd #eee #ccc; font-size: 12px; padding: 2px 1px 3px 3px; 
+    color: #333333; background: #fff;}
+section.profile textarea {height: 84px;}
+textarea {padding: 5px 4px; resize:none;}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    background-color:#FFFFCC; outline-color:#FFCC66; outline-style:solid; outline-width:1px;}
+input[type=text],input[type=password], select {
+    margin: 1px 0 5px; padding: 4px 3px 5px 5px; font-family: verdana,sans-serif; font-size: 15px;}
+select {font-size: 15px;}
+
+dt {margin-bottom: 5px;}
+dd {height: 36px;}
+dt label{color: #666;}
+
+label.error {background-color: #CB4848; border-radius: 4px; color: #FFFFFF; padding: 4px 6px; text-align: left; display: inline-block;} 
+ul.errors li {text-align: left; display: inline-block; padding: 3px 6px; background-color: #BB2525; color: #FFFFFF; border-radius: 4px;}
+
+/*---------------
+ * Live search
+ *---------------*/
+input.live-search{background-color: #FCFCC8; border: 1px solid #F2EBAA; width: 200px; font-size: 13px; font-style: italic;
+    color: #444; padding: 4px;}
+input.live-search:focus{outline: none}
+
+/*---------------
+ * Fancy buttons
+ *---------------*/
+input[type=submit] {padding: 3px; width: 100px; margin-left: 104px; font-family: verdana,sans-serif; font-size: 12px;}
+input[type=submit].awesome {border: medium none; padding:6px 10px 5px; font-family: "Verdana","Sans-Serif"; font-size: 14px; line-height:1.3em;}
+
+.awesome,.awesome:visited {
+    position: relative; padding: 7px 15px 6px; outline:0 none; line-height:1em; display: inline-block; vertical-align: top;
+    background: #666 url('../img/button-overlay.png') repeat-x; border-bottom: 1px solid #555; color: #fff; cursor: pointer;
+    text-decoration: none; font-size: 12px; border-radius: 2px; box-shadow:0 1px 3px #d5d5d5;}
+.awesome:active {outline:0 none; top:1px}
+.awesome:hover {background-color:#333; color:#fff; outline:0 none}
+.awesome.red {background-color: #EE355A;}
+.awesome.red:hover {background-color: #FF0033;}
+.awesome.small {font-size:0.8em; padding:5px 7px}
+.awesome.big {font-size: 1.6em; padding: 0.5em 1.5em;}
+
+/*---------------
+ * Buttons #2
+ *---------------*/
+.button {color: #444; font-family: 'Segoe UI', Arial; font-size: 12px; padding: 5px 8px; position: relative; text-decoration: none; background-color: #eee; border: 1px solid #ccc; border-radius: 12px; background-image: -webkit-linear-gradient(top, #fff, #eee); background-image: -moz-linear-gradient(top, #fff, #eee); background-image: linear-gradient(top, #fff, #eee);}
+.button img{padding: 5px 5px 5px 2px;position: relative;top: 8px;}
+.button:hover {color: green;outline:0 none;}
+.button:active {background-image: -webkit-linear-gradient(top, #eee, #fff);background-image: -moz-linear-gradient(top, #eee, #fff); background-image: linear-gradient(top, #eee, #fff);top: 1px;}
+
+/*---------------
+ * Buttons #3
+ *---------------*/
+.square {color: #444; font-family: 'Segoe UI', Arial; font-size: 13px; padding: 4px 8px; position: relative; text-decoration: none; background-color: #eee; border: 1px solid #ccc; background-image: -webkit-linear-gradient(top, #fff, #eee); background-image: -moz-linear-gradient(top, #fff, #eee); background-image: linear-gradient(top, #fff, #eee);}
+.square img{padding: 5px 5px 5px 2px;position: relative;top: 8px;}
+.square:hover {color: green;outline:0 none;}
+.square:active {background-image: -webkit-linear-gradient(top, #eee, #fff);background-image: -moz-linear-gradient(top, #eee, #fff); background-image: linear-gradient(top, #eee, #fff);top: 1px;}

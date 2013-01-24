@@ -1,0 +1,70 @@
+h3 {text-shadow: 5px 5px 0px #eee, 7px 7px 0px #707070;}
+div.links {margin: auto; text-align: center; width: 300px;}
+input[type=text],input[type=password], textarea, select {width: 300px;}
+input[disabled=disabled]{background-color: #F5F5F5;}
+
+/*-----------------
+ * Form exceptions
+ *----------------*/
+#csrf-element, #recaptcha-element, #notes-element, #note-element {height: auto;}
+#csrf-element .errors, #recaptcha-element .errors {position: static; text-align:center;}
+
+
+.signup #submit-element {margin-top: 66px;}
+
+/*-----------------
+ * /user/signup
+ * /user/login 
+ * /user/recover
+ *----------------*/
+ul.errors {position: relative; left: 320px; top: -32px;}
+label.error {position: relative; left: 320px; top: -32px;}
+
+/*-------------------
+ * /user/profile 
+ * /user/add-address
+ *------------------*/
+div.left {margin-left: 220px; float:left; width: 250px;}
+div.right {float: right; width: 450px;}
+.left ul.errors {text-align: right; left: -260px;}
+.left label.error {left: -155px; text-align: right; top: -32px;}
+.right ul.errors {left: 250px;}
+.right label.error {left: 10px; text-align: right; top: 0px;}
+
+.profile input[type=text], .profile input[type=password], .profile textarea {width: 233px;}
+.address-add input[type=text], .address-add input[type=password], .address-add textarea {width: 233px;}
+.address-edit input[type=text], .address-edit input[type=password], .address-edit textarea {width: 233px;}
+.profile input[type=submit], .address-add input[type=submit], .address-edit input[type=submit] {margin-left: 445px;}
+
+
+/*---------------
+ * /user/address
+ *---------------*/
+.address .addr-line {border-bottom: 1px dashed #ccc; margin: auto; padding: 3px; width: 730px;}
+.address span.addr {display: inline-block; overflow: hidden; white-space: nowrap; width: 380px; text-overflow:ellipsis;
+    vertical-align: bottom;}
+.address span.type {display: inline-block; margin-right: 6px; background: #CDD7F9; padding: 1px 6px; 
+    width: 56px; text-align: center;}
+.address span.note {margin-left: 10px; float: right; font-style: italic; padding-top: 2px; color: #777;
+    overflow: hidden; text-overflow:ellipsis; width: 135px;}
+.address span.edit {margin-left: 10px; float: right; font-size: 11px; text-transform: lowercase; padding-top: 6px; line-height: 1;}
+.address span.delete {margin-left: 5px; float: right; font-size: 11px; text-transform: lowercase; padding-top: 6px; line-height: 1;}
+
+.add-new {-moz-border-radius: 7px;background: url("../img/add_plus_small.png") no-repeat scroll left center #FFEECC; 
+    font-size:11px; line-height: 1.4; border: 1px solid #CCCCCC;color: #5C5C5C;padding: 4px 5px 5px 28px; border-radius: 7px;}
+.add-new:hover {color:green}
+
+/*---------------
+ * /user/bank
+ *---------------*/
+.bank .bank-line {border-bottom: 1px dashed #ccc; margin: auto; padding: 3px; width: 730px;}
+.bank span.bank {display: inline-block; overflow: hidden; white-space: nowrap; width: 380px; text-overflow:ellipsis;
+    vertical-align: bottom;}
+.bank span.type {display: inline-block; margin-right: 6px; background: #CDD7F9; padding: 1px 6px; 
+    width: 70px; text-align: center;}
+.bank span.note {margin-left: 10px; float: right; font-style: italic; padding-top: 2px; color: #777;
+    overflow: hidden; text-overflow:ellipsis; width: 135px;}
+.bank span.edit {margin-left: 10px; float: right; font-size: 11px; text-transform: lowercase; padding-top: 6px; line-height: 1;}
+.bank span.delete {margin-left: 5px; float: right; font-size: 11px; text-transform: lowercase; padding-top: 6px; line-height: 1;}
+
+/*#label_chzn{width: 243px !important;}*/

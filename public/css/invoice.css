@@ -1,0 +1,44 @@
+.invoice{font-family: arial; margin: 0 auto; width:780px}
+.invoice .head{height: 90px}
+.invoice .head .company-logo{float: right;}
+.invoice .head .company-logo img{width: 200px;}
+.invoice p.invoice-number{font-size: 20px; padding: 10px 0 10px 0;}
+.invoice p.invoice-date{font-size: 16px;}
+
+.data-user{float: right; margin-bottom: 20px; width: 49%;}
+.data-client{float: left; margin-bottom: 20px; width: 49%;}
+.data-user dl, .data-client dl{}
+.data-user dt, .data-client dt{display: inline-block; height: 15px; width: 40%;}
+.data-user dd, .data-client dd{display: inline-block;height: 15px; width: 60%;}
+
+.invoice .data-additional{}
+.invoice .data-additional dt{display: inline-block;width: 19%;}
+.invoice .data-additional dd{display: inline-block;height: 20px;width: 79%;}
+
+table.items{width:100%}
+table.items th{background-color: #F5F5F5;border: 1px solid #ccc;font-weight: bold;padding: 3px;text-align: center;}
+table.items tfoot td.nb{border:none}
+table.items th.w5{width:5%}
+table.items th.w10{width:10%}
+table.items th.w15{width:15%}
+table.items th.w20{width:20%}
+table.items th.w40{width:40%}
+table.items td{border:1px solid #ccc;padding:3px}
+
+.invoice .tc{text-align: center;}
+.invoice .tr{text-align: right;}
+.invoice .strong, strong{font-weight: bold;}
+
+.invoice .inwords{margin-bottom: 30px;}
+.invoice .inwords p{border-bottom: 1px dotted #ccc;display: inline;font-style: italic; padding: 0 200px 0 20px;}
+
+.invoice .payment{margin-bottom:50px}
+
+.invoice .foot{}
+.invoice .foot .left{float: left; width: 49%;}
+.invoice .foot .right{float: right; width: 49%;}
+.invoice .foot .left p, .invoice .foot .right p{margin-bottom: 10px;}
+.invoice .foot .left dt{display: inline-block;width: 35%;}
+.invoice .foot .right dt{display: inline-block;width: 35%;}
+.invoice .foot .left dd{border-bottom: 1px dashed #ccc; display: inline-block;height: 22px;width: 60%;}
+.invoice .foot .right dd{border-bottom: 1px dashed #ccc; display: inline-block;height: 22px;width: 60%;}

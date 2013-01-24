@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Booker | beta ver 0.1</title>
+        <link href="/css/reset.css" type="text/css" rel="stylesheet">
+        <link href="/css/default.css" type="text/css" rel="stylesheet">
+        <link href="/css/forms.css" type="text/css" rel="stylesheet">
+        <link href="/css/widgets.css" type="text/css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>
+            document.createElement('section');
+            document.createElement('header');
+            document.createElement('footer');
+        </script>
+<?php
+        echo $this->headTitle();
+        echo $this->headLink();
+        echo $this->headScript();
+?>
+    </head>
+    <body>
+    <div id="wrap">
+        <header>
+            <a href="/"><div id="logo">Booker</div></a>
+            <?php if (Zend_Auth::getInstance()->hasIdentity()) {    ?>
+            <ul id="personal">
+                <li title="Profile"><a class="profile" title="Profile" href="/user/profile">Profile</a></li>
+                <li title="Settings"><a class="settings" href="/user/settings">Settings</a></li>
+                <li title="Stats"><a class="stats" href="#">Stats</a></li>
+                <li title="Messages"><a class="messages" href="#">Messages</a></li>
+                <li title="Logout"><a class="logout" href="/user/account/logout">Logout</a></li>
+            </ul>
+            <?php } else { ?>
+                <ul id="personal">
+                    <li title="Login"><a class="login" title="Login" href="/user/account/login">Login</a></li>
+                    <li title="Register"><a class="register" href="/user/account/signup">Register</a></li>
+                </ul>
+            <?php } ?>
+        </header>
+        <nav>
+            <ul class="panel">
+                <li><a class="customers" href="/client/manage">Clients</a></li>
+                <li><a class="product" href="/item/">Products</a></li>
+                <li><a class="invoice" href="/invoice/">Invoices</a></li>
+                <li><a class="billing" href="/billing/">Billing</a></li>
+                <li><a class="balance" href="/balance/">Balance</a></li>
+                <li><a class="task" href="/task/">Tasks</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <?php echo $this->layout()->content; ?>
+        </div>
+    </div>
+    <footer>
+        <ul id="links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <p>
+            <span>
+                <g:plusone></g:plusone>
+            </span>
+        </p>
+    </footer>
+    </body>
+</html>
+

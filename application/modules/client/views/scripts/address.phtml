@@ -1,0 +1,22 @@
+   <table id="address-table" class="main">
+        <thead>
+            <tr>
+                <th>ID</th><th>Address 1</th><th>Address 2</th><th>City</th><th>County</th><th>Postcode</th><th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    if ($this->address && count($this->address))
+    foreach($this->address as $a): ?>
+        <tr data-id="<?= $a->id ?>">
+            <td><?= $a->id ?></td>
+            <td><?= $a->address1 ?></td>
+            <td><?= $a->address2 ?></td>
+            <td><?= $a->city ?></td>
+            <td><?= $a->county ?></td>
+            <td><?= $a->postcode ?></td>
+            <td><?= $a->country ?></td>
+        </tr>
+<?php  endforeach; ?>
+        </tbody>                
+    </table>

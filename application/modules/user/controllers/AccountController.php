@@ -53,7 +53,6 @@ class User_AccountController extends Zend_Controller_Action
 
     public function loginAction()
     {
-
         if (Zend_Auth::getInstance()->hasIdentity()) {
             $this->_helper->redirector('index','index');
         }

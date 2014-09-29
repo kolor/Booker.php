@@ -28,6 +28,7 @@ class Client_ManageController extends Zend_Controller_Action
             if ($form->isValid($this->_request->getPost())) {
                 $data = $form->getValues();
                 $data['owner'] = $this->owner;
+                $data['email_home'] = $data['email_work'];
                 $client = new Application_Model_Client($data);
                 $client->save();
                 $this->_helper->redirector('index');

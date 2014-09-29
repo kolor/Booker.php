@@ -35,9 +35,9 @@ input[type=submit] {padding: 3px; width: 100px; margin-left: 104px; font-family:
 input[type=submit].awesome {border: medium none; padding:6px 10px 5px; font-family: "Verdana","Sans-Serif"; font-size: 14px; line-height:1.3em;}
 
 .awesome,.awesome:visited {
-    position: relative; padding: 7px 15px 6px; outline:0 none; line-height:1em; display: inline-block; vertical-align: top;
-    background: #666 url('../img/button-overlay.png') repeat-x; border-bottom: 1px solid #555; color: #fff; cursor: pointer;
-    text-decoration: none; font-size: 12px; border-radius: 2px; box-shadow:0 1px 3px #d5d5d5;}
+    position: relative; padding: 7px 15px 6px; outline:0 none; line-height:1em; display: inline-block; 
+    vertical-align: top; background: #666 url('../img/button-overlay.png') repeat-x; border-bottom: 1px solid #555; 
+    color: #fff; cursor: pointer; text-decoration: none; font-size: 12px; border-radius: 2px; box-shadow:0 1px 3px #d5d5d5;}
 .awesome:active {outline:0 none; top:1px}
 .awesome:hover {background-color:#333; color:#fff; outline:0 none}
 .awesome.red {background-color: #EE355A;}
@@ -48,10 +48,11 @@ input[type=submit].awesome {border: medium none; padding:6px 10px 5px; font-fami
 /*---------------
  * Buttons #2
  *---------------*/
-.button {color: #444; font-family: 'Segoe UI', Arial; font-size: 12px; padding: 5px 8px; position: relative; text-decoration: none; background-color: #eee; border: 1px solid #ccc; border-radius: 12px; background-image: -webkit-linear-gradient(top, #fff, #eee); background-image: -moz-linear-gradient(top, #fff, #eee); background-image: linear-gradient(top, #fff, #eee);}
+.button {color: #444; font-family: 'Segoe UI', Arial; font-size: 12px; padding: 5px 8px; position: relative; 
+	text-decoration: none; background-color: #fafafa; border: 1px solid #ccc;}
 .button img{padding: 5px 5px 5px 2px;position: relative;top: 8px;}
 .button:hover {color: green;outline:0 none;}
-.button:active {background-image: -webkit-linear-gradient(top, #eee, #fff);background-image: -moz-linear-gradient(top, #eee, #fff); background-image: linear-gradient(top, #eee, #fff);top: 1px;}
+.button:active {top: 1px; background-color: #eee;}
 
 /*---------------
  * Buttons #3

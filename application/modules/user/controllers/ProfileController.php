@@ -20,7 +20,9 @@ class User_ProfileController extends Zend_Controller_Action
                 $user->save();
             }
         }
-        $form->populate($user->getData());
+        if ($user) {
+            $form->populate($user->getData());    
+        }
         $this->view->form = $form;
     }
 

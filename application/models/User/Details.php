@@ -23,8 +23,11 @@ class Application_Model_User_Details extends Application_Model_Base {
         
     public function __construct(array $options = null)
     {
-        if (is_array($options))
+        if (is_array($options)) {    
             $this->setOptions($options);
+            $this->id = $options['row_id'];
+        }
+        
     }
     
     /*-------------------

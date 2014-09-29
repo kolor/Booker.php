@@ -19,7 +19,6 @@ class UserController extends Zend_Controller_Action
         echo '<pre>';
         // user profile for default action
         $user = Application_Model_User::find('1');
-        var_dump($user);
         echo $user->fullname;
         
     }
@@ -36,7 +35,7 @@ class UserController extends Zend_Controller_Action
                 $user = new Application_Model_User($data);
                 $user->code = 0;
                 $user->setPassword($data['password'])->setRole(3, 'Owner')->save();
-                $msg = "Welcome to Booker!\n\nYour username is: $data[username]\nAnd your password is: $data[password]\n\nKeep it safe!";
+                $msg = "Welcome to Booker!\n\nYour username is: {$data[username]}\nAnd your password is: {$data[password]}\n\nKeep it safe!";
                 $this->_sendEmail($data['email'], 'Booker registration confirmation', $msg);
                 $this->_login($data['username'], md5($data['password']));
                 $this->_flash->addMessage("Registration complete!");

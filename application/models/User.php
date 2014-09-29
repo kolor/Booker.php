@@ -81,7 +81,7 @@ class Application_Model_User extends Application_Model_Base {
     public static function find($id)
     {
         $sql = self::getDb()->select()->from(array('u' => 'user'))->join(array('d' => 'details'), 'u.id = d.row_id')
-                            ->where('d.row_type = 1')->where('u.id = ?', $id);
+                            ->where('d.row_type = 1')->where('u.id = ?', $id);                          
         $row = self::getDb()->fetchRow($sql);
         if (!$row or count($row) == 0)
             return;
@@ -93,7 +93,6 @@ class Application_Model_User extends Application_Model_Base {
     {
         $data = $this->getData();
         $data['created'] = date('Y-m-d H:i:s');
-        
         $userData = array_intersect_key($data, array_flip($this->userData)); 
         $detailsData = array_intersect_key($data, array_flip($this->detailsData));
         if ($this->id === null) {

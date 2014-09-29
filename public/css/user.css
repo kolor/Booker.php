@@ -1,5 +1,5 @@
 h3 {text-shadow: 5px 5px 0px #eee, 7px 7px 0px #707070;}
-div.links {margin: auto; text-align: center; width: 300px;}
+.links {margin: auto; text-align: center; width: 300px;}
 input[type=text],input[type=password], textarea, select {width: 300px;}
 input[disabled=disabled]{background-color: #F5F5F5;}
 
@@ -10,7 +10,7 @@ input[disabled=disabled]{background-color: #F5F5F5;}
 #csrf-element .errors, #recaptcha-element .errors {position: static; text-align:center;}
 
 
-.signup #submit-element {margin-top: 66px;}
+.signup #submit-element {margin-top: 6px;}
 
 /*-----------------
  * /user/signup

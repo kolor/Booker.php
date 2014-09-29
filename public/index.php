@@ -47,3 +47,9 @@ Zend_Validate_Abstract::setDefaultTranslator($translator);
 
 $application->bootstrap()
             ->run();
+
+function xlog($dump) {
+    echo "<pre>";
+    print_r($dump);
+    die;
+}

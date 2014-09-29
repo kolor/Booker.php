@@ -22,7 +22,7 @@ class IndexController extends Zend_Controller_Action
             $this->view->greeting = 'Hello guest';
         }
     
-        var_dump($_SERVER);   
+        
     
     
     }
